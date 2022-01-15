@@ -6,25 +6,23 @@
 #include <math.h>
 #include <stdlib.h>
 
-int main(){
+void main(){ 
+          int num,sum=0,temp,len=0;
     
-    int num,sum=0,temp,len=0;
+start:    printf("Enter the number\n");
+          scanf("%d",&num);
     
-    printf("Enter the number\n");
-    scanf("%d",&num);
-    temp=num;
-    while(temp>0){
-        temp=temp/10;
-        len++;
-    }
-    temp=num;
-    while(temp>0){
-        sum+=pow(temp%10,len);
-        temp=temp/10;
-    }
+          if(num<1){      printf("\nInvalid Number\n");       goto start; }
     
-    (sum==num)? printf("\nArmstrong No = %d and %d\n",sum,num) : printf("\nNot Armstrong = %d and %d\n",sum,num);
-    
-    return 0;
-    
+          temp=num;
+          while(temp>0){                    // find the length of a Number
+              temp=temp/10;
+              len++;
+          }
+          temp=num;
+          while(temp>0){                    //Armstrong Number logic
+              sum+=pow(temp%10,len);
+              temp=temp/10;
+          }
+          (sum==num)? printf("\nGiven Number %d is Armstrong Number\n",num) : printf("\nGiven Number %d is not Armstrong Number\n",num);
 }
