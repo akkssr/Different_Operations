@@ -1,5 +1,5 @@
 
-//    Armstrong number
+//    Armstrong number by using User-Defined Functions by siraj
 
 #include <stdio.h>
 
@@ -20,8 +20,7 @@ static inline long long int str_to_int(char *tmp,int len){                  // c
     return val;
 }
 
-int main(){
-    
+void main(){
     char str[30];
     
     printf("Enter the number\n");
@@ -34,10 +33,6 @@ int main(){
     for(int i=0;i<=len;i++){
         
         sum+=power((str[i]-48),len);                                        // Armstrong number logic
-    }
-    
-    (sum==num)? printf("\nArmstrong No = %lld and %lld\n",sum,num) : printf("\nNot Armstrong = %lld and %lld\n",sum,num);
-    
-    return 0;
-    
+    } 
+    (sum==num)? printf("\nGiven Number %lld is Armstrong Number\n",num) : printf("\nGiven Number %lld is not Armstrong Number\n",num);
 }
