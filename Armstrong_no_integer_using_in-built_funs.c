@@ -26,3 +26,4 @@ start:    printf("Enter the number\n");
           }
           (sum==num)? printf("\nGiven Number %d is Armstrong Number\n",num) : printf("\nGiven Number %d is not Armstrong Number\n",num);
 }
+
